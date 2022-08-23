@@ -25,9 +25,9 @@ class _LoginControllerState extends State<LoginController> {
 
   void _login() {
     context.read<LoginBloc>().add(
-          LoginUserEvent(const {
-            "email": "muh.nurali43@gmail.com",
-            "password": "12345678",
+          LoginUserEvent({
+            "email": _emailController.text.trim(),
+            "password": _passwordController.text.trim(),
           }),
         );
   }
